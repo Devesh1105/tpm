@@ -8,10 +8,10 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
 :root{
-  --bg:#F5F6F8; --surface:#FFFFFF; --line:#DDE1E6; --ink:#1F2933; --muted:#616E7C;
-  --accent:#2563EB; --accent-deep:#1D4ED8; --accent-soft:#EFF4FF;
-  --fever:#C62828; --fever-soft:#FDECEC; --ok:#2E7D32; --ok-soft:#EAF5EA; --warn:#B26A00; --warn-soft:#FFF4E0;
-  color-scheme:light;
+  --bg:#0F1115; --surface:#171A21; --line:#2A2F3A; --ink:#E6E8EB; --muted:#9AA4B2;
+  --accent:#3B82F6; --accent-deep:#2563EB; --accent-soft:#1A2540;
+  --fever:#F87171; --fever-soft:#3A1D1F; --ok:#4ADE80; --ok-soft:#16301F; --warn:#FBBF24; --warn-soft:#3A2E12;
+  color-scheme:dark;
 }
 body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:15px;line-height:1.5}
 *{box-sizing:border-box}
@@ -61,7 +61,7 @@ h2{font-size:16px;font-weight:600;margin:0 0 10px}
 .chip.warn{background:var(--warn-soft);color:var(--warn)}
 .chip.acc{background:var(--accent-soft);color:var(--accent-deep)}
 .inl{display:flex;gap:6px;align-items:center}
-.inl input{width:80px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.inl input{width:80px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
 .empty{padding:24px 12px;text-align:center;color:var(--muted)}
 .cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:16px;align-items:start}
 @media (max-width:760px){.cols{grid-template-columns:1fr}}
@@ -71,7 +71,7 @@ h2{font-size:16px;font-weight:600;margin:0 0 10px}
 .dchip{border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12px;min-width:62px;color:var(--muted)}
 .dchip b{display:block;font-size:14px;color:var(--ink);font-variant-numeric:tabular-nums}
 .dchip.f b{color:var(--fever)} .dchip.n b{color:var(--ok)}
-textarea{width:100%;min-height:80px;padding:8px;border:1px solid var(--line);border-radius:6px}
+textarea{width:100%;min-height:80px;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
 .note{font-size:13px;color:var(--muted)}
 .stack{display:flex;flex-direction:column;gap:8px}
 .actions{display:flex;flex-wrap:wrap;gap:8px}
@@ -95,7 +95,7 @@ textarea{width:100%;min-height:80px;padding:8px;border:1px solid var(--line);bor
 .legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px;border:1px solid var(--line);background:var(--sw,var(--bg))}
 form.admit{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) auto;gap:8px;align-items:end}
 form.admit label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
-form.admit input{padding:6px 8px;border:1px solid var(--line);border-radius:6px}
+form.admit input{padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
 @media (max-width:520px){form.admit{grid-template-columns:1fr 1fr}form.admit .btn{grid-column:1/-1}}
 .signin{max-width:440px;margin:56px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px}
 .signin .logo{margin-bottom:16px}
@@ -106,7 +106,7 @@ form.admit input{padding:6px 8px;border:1px solid var(--line);border-radius:6px}
 .role .ico svg{width:20px;height:20px}
 .role b{display:block;font-weight:600;color:var(--ink)}
 .role span{display:block;color:var(--muted);font-size:13px}
-.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:#fff;padding:8px 14px;border-radius:6px;font-size:14px;z-index:20}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:6px;font-size:14px;z-index:20}
 .sec{margin-top:24px}
 </style>
 
